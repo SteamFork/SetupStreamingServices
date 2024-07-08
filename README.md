@@ -40,5 +40,7 @@ The list below is based on the index found in the source tree and may not contai
 Before running this script, be sure to switch to desktop mode and install Google Chrome from the discovery software center.  Once completed, open `konsole`, and paste the installation script to get started.
 
 ```
-curl -L https://github.com/SteamFork/SetupStreamingServices/raw/main/install.sh | sh
+curl -L https://github.com/SteamFork/SetupStreamingServices/raw/main/install.sh | bash
 ```
+
+Return to Gamescope, and use the [SteamGridDB](https://github.com/SteamGridDB/decky-steamgriddb) Decky plugin to add images to the new streaming services launchers.
