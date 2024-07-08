@@ -41,8 +41,10 @@ do
 	NEW_ITEM=$(grep "^${ITEM}|" ${SOURCE_FILE})
 	NAME="${NEW_ITEM%|*}"
 	URL="${NEW_ITEM#*|}"
-	echo "Adding entry: ${NAME} -> ${URL}..."
-	cat <<EOF >"${APPS_PATH}/${NAME}.desktop"
+	if [ ! -e "${APPS_PATH}/${NAME}.desktop" ]
+	then
+		echo "Adding entry: ${NAME} -> ${URL}..."
+		cat <<EOF >"${APPS_PATH}/${NAME}.desktop"
 [Desktop Entry]
 Icon=
 Name=${NAME}
@@ -52,5 +54,8 @@ EOF
 	echo "Adding: ${NAME} to Steam..."
 	steamos-add-to-steam "${APPS_PATH}/${NAME}.desktop"
 	sleep 1
+        else
+                echo "Not adding entry: ${NAME}, as it already exists..."
+        fi
 	unset NAME URL
 done
