@@ -6,7 +6,7 @@ APPS_PATH="${HOME}/Applications"
 
 if [ ! -e "${SOURCE_FILE}" ]
 then
-  curl -Lo "${SOURCE_FILE}" "https://raw.githubusercontent.com/SteamFork/SetupStreamingServices/links.index"
+  curl -Lo "${SOURCE_FILE}" "https://github.com/SteamFork/SetupStreamingServices/raw/main/links.index"
 fi
 
 if [ ! -d "${APPS_PATH}" ]
