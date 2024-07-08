@@ -38,7 +38,7 @@ declare arrSelected=()
 IFS='|' read -r -a arrSelected <<< ${URLS}
 for ITEM in "${arrSelected[@]}"
 do
-	NEW_ITEM=$(grep "^${ITEM}" ${SOURCE_FILE})
+	NEW_ITEM=$(grep "^${ITEM}|" ${SOURCE_FILE})
 	NAME="${NEW_ITEM%|*}"
 	URL="${NEW_ITEM#*|}"
 	echo "Adding entry: ${NAME} -> ${URL}..."
