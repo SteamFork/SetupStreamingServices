@@ -1,18 +1,27 @@
 #!/bin/bash
 
 WORK_DIR="$(dirname $(realpath "${0}"))"
-SOURCE_FILE="${WORK_DIR}/.links.index"
+SOURCE_FILE="${WORK_DIR}/links.index"
 APPS_PATH="${HOME}/Applications"
+SCRIPT_PATH="${HOME}/bin"
+SCRIPT_COMMAND="${SCRIPT_PATH}/steamfork-browser-open"
+
+for DIR in "${APPS_PATH}" "${SCRIPT_PATH}"
+do
+	if [ ! -d "${DIR}" ]
+	then
+		mkdir -p "${DIR}"
+	fi
+done
 
 if [ ! -e "${SOURCE_FILE}" ]
 then
-  curl -Lo "${SOURCE_FILE}" "https://github.com/SteamFork/SetupStreamingServices/raw/main/links.index"
+	echo "Fetching source data..."
+	curl -Lo "${SOURCE_FILE}" "https://github.com/SteamFork/SetupStreamingServices/raw/main/data/links.index"
 fi
 
-if [ ! -d "${APPS_PATH}" ]
-then
-	mkdir -p "${APPS_PATH}"
-fi
+echo "Fetching browser script..."
+curl -Lo ${SCRIPT_COMMAND} "https://github.com/SteamFork/SetupStreamingServices/raw/main/bin/steamfork-browser-open"
 
 declare -a allURLs=()
 while read SITES
@@ -49,7 +58,7 @@ do
 Icon=
 Name=${NAME}
 Type=Application
-Exec=/usr/bin/steamfork-browser-open "${URL}"
+Exec=${SCRIPT_COMMAND} "${URL}"
 EOF
 	echo "Adding: ${NAME} to Steam..."
 	steamos-add-to-steam "${APPS_PATH}/${NAME}.desktop"
