@@ -1,6 +1,6 @@
 #!/bin/bash
-# SPDX-License-Identifier: GPL-2.0
-# Copyright (C) 2024-present Fewtarius
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Copyright (C) 2024 SteamFork (https://github.com/SteamFork)
 
 WORK_DIR="$(dirname $(realpath "${0}"))"
 SOURCE_FILE="${WORK_DIR}/links.index"
