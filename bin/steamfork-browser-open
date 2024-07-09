@@ -5,7 +5,7 @@
 URL=${URL:-${1}}
 
 BROWSER="com.google.Chrome"
-DESKTOP_FILE="${HOME}/.local/share/flatpak/exports/share/applications/${BROWSER}.desktop"
+DESKTOP_FILE="/var/lib/flatpak/exports/share/applications/${BROWSER}.desktop"
 
 if [ ! -e "${DESKTOP_FILE}" ]
 then
