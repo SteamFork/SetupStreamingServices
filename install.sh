@@ -22,6 +22,7 @@ fi
 
 echo "Fetching browser script..."
 curl -Lo ${SCRIPT_COMMAND} "https://github.com/SteamFork/SetupStreamingServices/raw/main/bin/steamfork-browser-open"
+chmod 0755 ${SCRIPT_COMMAND}
 
 declare -a allURLs=()
 while read SITES
@@ -60,6 +61,7 @@ Name=${NAME}
 Type=Application
 Exec=${SCRIPT_COMMAND} "${URL}"
 EOF
+	chmod 0755 "${APPS_PATH}/${NAME}.desktop"
 	echo "Adding: ${NAME} to Steam..."
 	steamos-add-to-steam "${APPS_PATH}/${NAME}.desktop"
 	sleep 1
