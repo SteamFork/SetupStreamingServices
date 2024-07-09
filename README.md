@@ -17,8 +17,6 @@ The list below is based on the index found in the source tree and may not contai
 * [HBO Max](https://www.max.com)
 * [Home Assistant](https://demo.home-assistant.io)
 * [Hulu](https://www.hulu.com)
-* [Jellyfin](http://localhost:8096)
-* [Kavita](http://localhost:5000)
 * [Nebula](https://nebula.tv)
 * [Netflix](https://www.netflix.com)
 * [Paramount+](https://www.paramountplus.com)
