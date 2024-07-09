@@ -42,3 +42,8 @@ curl -L https://github.com/SteamFork/SetupStreamingServices/raw/main/install.sh 
 ```
 
 Return to Gamescope, and use the [SteamGridDB](https://github.com/SteamGridDB/decky-steamgriddb) Decky plugin to add images to the new streaming services launchers.
+
+### Uninstalling
+1. Delete the launchers from Steam.
+2. Remove the related .desktop files from ~/Applications.
+3. Delete steamfork-browser-open from ~/bin.
