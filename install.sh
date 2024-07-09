@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (C) 2024-present Fewtarius
 
 WORK_DIR="$(dirname $(realpath "${0}"))"
 SOURCE_FILE="${WORK_DIR}/links.index"
