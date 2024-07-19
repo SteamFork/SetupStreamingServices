@@ -1,5 +1,5 @@
 ## Setup Streaming Services
-This script will provide a UI to select any URLs found in the `data/links.index` source file, and will create desktop icons and add them to GameScope.  It is compatible with all devices running SteamOS.
+This script will provide a UI to select any URLs found in the `data/links.index` source file, and will create desktop icons and add them to Steam.  It is compatible with all devices running SteamOS.
 
 <table>
   <tr>
