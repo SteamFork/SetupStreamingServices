@@ -31,7 +31,7 @@ while read SITES
 do
 	SITE="${SITES%|*}"
 	echo "Found site: "${SITE}"..."
-	allURLs+=("${SITE}")
+	allURLs+=("FALSE" "${SITE}")
 done < ${SOURCE_FILE}
 
 echo "[${allURLs[@]}]"
