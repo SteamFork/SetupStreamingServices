@@ -78,5 +78,5 @@ DESKTOP_FILE="/var/lib/flatpak/exports/share/applications/${BROWSER}.desktop"
 
 if [ ! -e "${DESKTOP_FILE}" ]
 then
-	        zenity --info --text="Please switch to desktop mode and install Google Chrome from the discovery software center."
+	        zenity --info --text="Please remember to install Google Chrome from the discovery software center."
 fi
