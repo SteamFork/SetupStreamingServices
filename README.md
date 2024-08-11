@@ -14,6 +14,7 @@ The list below is based on the index found in the source tree and may not contai
 * [Amazon Prime Video](https://www.amazon.com/video)
 * [Antstream](https://live.antstream.com)
 * [Apple TV](https://tv.apple.com)
+* [BBC iPlayer](https://www.bbc.co.uk/iplayer/)
 * [Crave](https://www.crave.ca)
 * [Crunchyroll](https://www.crunchyroll.com)
 * [Discord](https://discord.com/app)
