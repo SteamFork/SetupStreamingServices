@@ -16,11 +16,13 @@ do
 	fi
 done
 
-if [ ! -e "${SOURCE_FILE}" ]
+if [ -e "${SOURCE_FILE}" ]
 then
-	echo "Fetching source data..."
-	curl -Lo "${SOURCE_FILE}" "https://github.com/SteamFork/SetupStreamingServices/raw/main/data/links.index"
+	rm "${SOURCE_FILE}"
 fi
+
+echo "Fetching source data..."
+curl -Lo "${SOURCE_FILE}" "https://github.com/SteamFork/SetupStreamingServices/raw/main/data/links.index"
 
 echo "Fetching browser script..."
 curl -Lo ${SCRIPT_COMMAND} "https://github.com/SteamFork/SetupStreamingServices/raw/main/bin/steamfork-browser-open"
