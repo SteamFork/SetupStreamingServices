@@ -53,8 +53,8 @@ do
 	NEW_ITEM=$(grep "^${ITEM}|" ${SOURCE_FILE})
 	NAME="${NEW_ITEM%%|*}"
 	NEW_ITEM="${NEW_ITEM#*|}"
-	URL="${NEW_ITEM##*|}"
-	BROWSER="${NEW_ITEM%%|*}"
+	BROWSER="${NEW_ITEM##*|}"
+	URL="${NEW_ITEM%%|*}"
 	if [ ! -e "${APPS_PATH}/${NAME}.desktop" ]
 	then
 		echo "Adding entry: ${NAME} -> ${URL}..."
