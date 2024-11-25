@@ -29,7 +29,7 @@ chmod 0755 ${SCRIPT_COMMAND}
 declare -a allURLs=()
 while read SITES
 do
-	SITE="${SITES%|*}"
+	SITE="${SITES%%|*}"
 	echo "Found site: "${SITE}"..."
 	allURLs+=("FALSE" "${SITE}")
 done < ${SOURCE_FILE}
@@ -51,8 +51,10 @@ IFS='|' read -r -a arrSelected <<< ${URLS}
 for ITEM in "${arrSelected[@]}"
 do
 	NEW_ITEM=$(grep "^${ITEM}|" ${SOURCE_FILE})
-	NAME="${NEW_ITEM%|*}"
-	URL="${NEW_ITEM#*|}"
+	NAME="${NEW_ITEM%%|*}"
+	NEW_ITEM="${NEW_ITEM#*|}"
+	URL="${NEW_ITEM##*|}"
+	BROWSER="${NEW_ITEM%%|*}"
 	if [ ! -e "${APPS_PATH}/${NAME}.desktop" ]
 	then
 		echo "Adding entry: ${NAME} -> ${URL}..."
@@ -61,9 +63,18 @@ do
 Icon=
 Name=${NAME}
 Type=Application
-Exec=${SCRIPT_COMMAND} "${URL}"
+Exec=${SCRIPT_COMMAND} ${BROWSER} "${URL}"
 EOF
 	chmod 0755 "${APPS_PATH}/${NAME}.desktop"
+
+	echo "Install ${BROWSER} Flatpak (dependency)..."
+	BROWSER_INSTALLED=$(flatpak info ${BROWSER} >/dev/null 2>&1)
+	if (( $? > 0 ))
+	then
+		sudo flatpak --assumeyes install ${BROWSER}
+		flatpak --user override --filesystem=/run/udev:ro ${BROWSER}
+	fi
+
 	echo "Adding: ${NAME} to Steam..."
 	steamos-add-to-steam "${APPS_PATH}/${NAME}.desktop"
 	sleep 1
@@ -72,11 +83,3 @@ EOF
         fi
 	unset NAME URL
 done
-
-BROWSER="com.google.Chrome"
-DESKTOP_FILE="/var/lib/flatpak/exports/share/applications/${BROWSER}.desktop"
-
-if [ ! -e "${DESKTOP_FILE}" ]
-then
-	        zenity --info --text="Please remember to install Google Chrome from the discovery software center."
-fi

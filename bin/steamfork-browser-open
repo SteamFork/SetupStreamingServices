@@ -2,14 +2,26 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright (C) 2024 SteamFork (https://github.com/SteamFork)
 
-URL=${URL:-${1}}
+BROWSER=${1}
+URL=${URL:-${2}}
 
-BROWSER="com.google.Chrome"
-DESKTOP_FILE="/var/lib/flatpak/exports/share/applications/${BROWSER}.desktop"
-
-if [ ! -e "${DESKTOP_FILE}" ]
+if [ -z "${BROWSER}" ]
 then
-	zenity --info --text="Please switch to desktop mode and install Google Chrome from the discovery software center."
+  BROWSER="com.google.Chrome"
+fi
+
+BROWSER_INSTALLED=$(flatpak info ${BROWSER} >/dev/null 2>&1)
+if (( $? > 0 ))
+then
+	case ${BROWSER} in
+		com.google.Chrome)
+			BROWSER="Google Chrome"
+			;;
+		com.microsoft.Edge)
+			BROWSER="Microsoft Edge"
+			;;
+	esac
+	zenity --info --text="Please switch to desktop mode and install Microsoft Edge from the discovery software center."
 	exit 1
 fi
 
