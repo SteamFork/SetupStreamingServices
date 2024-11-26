@@ -35,7 +35,7 @@ The list below is based on the index found in the source tree and may not contai
 * [Twitch](https://www.twitch.tv)
 * [Twitter](https://twitter.com)
 * [Vimeo](https://vimeo.com)
-* [Xbox Cloud Gaming](https://www.xbox.com/play)
+* [Xbox Game Pass Streaming](https://www.xbox.com/play)
 * [YouTube Music](https://music.youtube.com)
 * [YouTube TV](https://tv.youtube.com)
 * [YouTube](https://www.youtube.com)
