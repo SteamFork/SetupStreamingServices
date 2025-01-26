@@ -1,26 +1,34 @@
 ABC IView|https://iview.abc.net.au|com.google.Chrome
+AirGPU|https://app.airgpu.com|com.google.Chrome
 Amazon Luna|https://luna.amazon.com/|com.google.Chrome
 Amazon Prime Video|https://www.amazon.com/video|com.google.Chrome
+Angry Birds TV|https://www.angrybirds.com/series/|com.google.Chrome
 Antstream|https://live.antstream.com/|com.google.Chrome
 Apple TV|https://tv.apple.com/|com.google.Chrome
-Binge|https://binge.com.au|com.google.Chrome
 BBC iPlayer|https://www.bbc.co.uk/iplayer/|com.google.Chrome
+Binge|https://binge.com.au|com.google.Chrome
+Blacknut|https://www.blacknut.com/en-gb/games|com.google.Chrome
+Boosteroid|https://cloud.boosteroid.com|com.google.Chrome
 Crave|https://www.crave.ca/|com.google.Chrome
 Criterion Channel|https://www.criterionchannel.com|com.google.Chrome
 Crunchyroll|https://www.crunchyroll.com/|com.google.Chrome
 Curiosity Stream|https://curiositystream.com|com.google.Chrome
+Daily Wire|https://www.dailywire.com/watch|com.google.Chrome
 Discord|https://discord.com/app|com.google.Chrome
 Disney+|https://www.disneyplus.com/|com.google.Chrome
 DocPlay|https://www.docplay.com|com.google.Chrome
 Dropout|https://www.dropout.tv/browse|com.google.Chrome
 Emby Theater|https://emby.media/|com.google.Chrome
+Fubo TV|https://www.fubo.tv|com.google.Chrome
 GeForce Now|https://play.geforcenow.com/mall/|com.google.Chrome
 GBNews Live|https://www.gbnews.com/watch/live|com.google.Chrome
 GlobalComix|https://globalcomix.com/|com.google.Chrome
 HBO Max|https://www.max.com/|com.google.Chrome
 Home Assistant|https://demo.home-assistant.io/|com.google.Chrome
 Hulu|https://www.hulu.com/|com.google.Chrome
+Internet Archive Movies|https://archive.org/details/movies|com.google.Chrome
 Kanopy|https://www.kanopy.com|com.google.Chrome
+Microsoft Movies and TV|https://apps.microsoft.com/movies|com.google.Chrome
 Nebula|https://nebula.tv/|com.google.Chrome
 Netflix|https://www.netflix.com/|com.google.Chrome
 Newgrounds Movies|https://www.newgrounds.com/movies|com.google.Chrome
@@ -32,8 +40,10 @@ Puffer|https://puffer.stanford.edu/player/|com.google.Chrome
 Plex|https://app.plex.tv/|com.google.Chrome
 Pocket Casts|https://play.pocketcasts.com|com.google.Chrome
 Poki|https://poki.com/|com.google.Chrome
+Reddit|https://www.reddit.com/r/all/|com.google.Chrome
 SBS Ondemand|https://www.sbs.com.au/ondemand/|com.google.Chrome
 Scratch|https://scratch.mit.edu/explore/projects/all|com.google.Chrome
+Sling TV|https://www.sling.com|com.google.Chrome
 Spotify|https://open.spotify.com/|com.google.Chrome
 Stan|https://www.stan.com.au|com.google.Chrome
 Steam Broadcasts|https://steamcommunity.com/?subsection=broadcasts|com.google.Chrome
@@ -44,7 +54,7 @@ Twitch|https://www.twitch.tv/|com.google.Chrome
 Twitter|https://twitter.com/|com.google.Chrome
 Vimeo|https://vimeo.com/|com.google.Chrome
 Virgin TV Go|https://virgintvgo.virginmedia.com/en/home|com.google.Chrome
-VK Play|https://vkplay.ru/|com.google.Chrome
+VK Play|https://cloud.vkplay.ru/|com.google.Chrome
 Xbox Game Pass Streaming|https://www.xbox.com/play|com.microsoft.Edge
 YouTube Music|https://music.youtube.com/|com.google.Chrome
 YouTube TV|https://tv.youtube.com/|com.google.Chrome
