@@ -1,0 +1,2 @@
+#!/bin/sh
+cat data/links.index | sed -e 's/^/* \[/' -e 's/|com.*$//' -e 's/|/\](/' -e 's/$/)/'

@@ -92,6 +92,20 @@ curl -L https://github.com/SteamFork/SetupStreamingServices/raw/main/install.sh 
 
 Return to Gamescope, and use the [SteamGridDB](https://github.com/SteamGridDB/decky-steamgriddb) Decky plugin to add images to the new streaming services launchers.
 
+### Enabling Native Touch Support
+After opening a shortcut, enable native touch support to improve the user experience.
+
+* Open controller settings for the platform.
+* Select `Edit Layout`.
+* Select `Action Sets`.
+* Select the `Default Settings` gear.
+* Select `Add Always-On command`.
+* Select `Add command`.
+* Select `System`.
+* Select `Touchscreen Native Support`.
+
+Return to your application screen, and use touch input.
+
 ### Uninstalling
 1. Delete the launchers from Steam.
 2. Remove the related .desktop files from ~/Applications.
