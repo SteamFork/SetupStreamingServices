@@ -7,6 +7,12 @@ This script will provide a UI to select any URLs found in the `data/links.index`
   </tr>
 </table>
 
+### Browser Selection
+When running the script, you will be prompted to select the browser you would like to use for all URLs. You can choose between:
+
+1. **Default Browsers**: Google Chrome and Microsoft Edge (Best Compatibility)
+2. **Brave Browser**: (Best Privacy)
+
 ### Supported URLs
 The list below is based on the index found in the source tree and may not contain the full list.  Review [data/links.index](/data/links.index) for the most up-to-date data.
 
